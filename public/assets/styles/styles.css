@@ -1,3 +1,6 @@
+/*Common Fonts Import*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:wght@100&display=swap');
 *{
     box-sizing: border-box;
 }
@@ -5,7 +8,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family:'Roboto',sans-serif;
+    font-family:'Poppins';
     margin:0;
 }
 
@@ -16,6 +19,7 @@ p{font-size: 1.25em;}
 ul{list-style:none}
 li{font-size:1.25em}
 button{
+    font-family: Poppins;
     font-size:1.5em;
     font-weight:bold;
     padding:10px 30px;
@@ -32,16 +36,16 @@ button:hover{
     max-width: 1400px;
     margin:auto;
 }
-.color-acento{color: blueviolet;}
+
+/*Header Section*/
 header{
     background-color: rgb(245,245,245);
 }
 header .logo{
     margin: 0;
-    padding: 25px 30px;
-    font-weight: bold;
-    color: blueviolet;
-    font-size:1.6em;
+    padding: 0px 0px;
+    height: 45%;
+    width: 45%;
 }
 header .container{
     display: flex;
@@ -57,15 +61,18 @@ header nav{
 }
 
 header a{
-    padding: 5px 12px;
+    padding: 5px 30px;
     text-decoration: none;
     font-weight: bold;
     color:black;
+    font-size: 20px;
 }
+
 header a:hover{
     color:blueviolet;
 }
-#hero{
+/*Section hero*/
+#hero {
     display:flex;
     align-items: center;
     justify-content: center;
@@ -76,8 +83,7 @@ header a:hover{
     background-image: linear-gradient(
             0deg,rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
-    )
-    ,url("https://www.softzone.es/app/uploads-softzone.es/2021/05/Programar-en-IDE.jpg");
+    );
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -86,34 +92,50 @@ header a:hover{
 #hero h1{
     color:white;
 }
-#hero button{
-    font-size: 1.75em;
-}
-#somos-proya{
-
-}
-#somos-proya .container{
+#hero h2{
+    color:white;
+    font-size: 2.5vw;
     text-align: center;
-    padding: 200px 12px;
+    justify-content: center;
 }
-#nuestros-programas{
+#hero .gato{
+    flex-direction: column;
+    height: 20vh;
+    width: 30vh;
+    padding: 0px 10px;
+}
+#hero .hombre{
+    flex-direction: column;
+    height: 20vh;
+    width: 30vh;
+    padding: 0px 10px;
+}
+#hero .balcon{
+    flex-direction: column;
+    height: 20vh;
+    width: 30vh;
+    padding: 0px 10px;
+}
+/*Section requisitos para postular*/
+#requisitos{
     background-color: rgb(30,30,30);
     color:white;
     text-align: center;
+    font-family: Lato;
 }
-nuestros-programas .container{
+requisitos .container{
 padding: 150px 12px;
 }
 
-#nuestros-programas h2{
+#requisitos h2{
     margin-top:0;
     font-size:3.2em;
 }
 
-#nuestros-programas p{
+#requisitos p{
     display: none;
 }
-#nuestros-programas .carta{
+#requisitos .carta{
     background-position: center center;
     background-size: cover;
     padding:   50px;
@@ -125,36 +147,80 @@ padding: 150px 12px;
     0deg,
     rgb(0,0,0,0.5),
     rgb(0,0,0,0.5)
-    )
-    ,url("https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzYXJyb2xsYWRvciUyMGZyb250ZW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+    );
 }
 .carta:nth-child(2){
     background-image: linear-gradient(
             0deg,
             rgb(0,0,0,0.5),
             rgb(0,0,0,0.5)
-    )
-    ,url("https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzYXJyb2xsYWRvciUyMGZyb250ZW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+    );
 }
 .carta:nth-child(3){
     background-image: linear-gradient(
             0deg,
             rgb(0,0,0,0.5),
             rgb(0,0,0,0.5)
-    )
-    ,url("https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzYXJyb2xsYWRvciUyMGZyb250ZW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+    );
+}
+/*section PostulaYa!*/
+#postulaYa .texto{
+    font-family: Lato;
+    font-color: black;
+}
+#postulaYa .formulario{
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    margin-top:30px;
+    padding:20px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    position: relative;
+    font-family: Lato;
+    font-color: black;
 }
 
-#caracteristicas .container{
-    text-align: center;
-    padding:200px 12px;
+#postulaYa .formulario__input, .formulario__label,
+.formulario_submit{
+    display: block;
+    width: 100%;
+    font-size:1.3em;
+    font-family: Lato;
+    font-color: black;
 }
-#caracteristicas li{
-    margin: 12px 0px;
-    font-weight: bold;
+#postulaYa .formulario__input{
+    padding: 20px;
+    background: rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-bottom: 40px;
+}
+#postulaYa .formulario__input:focus{
+    outline: 1px solid rgba(0,0,0,0.3);
+}
+#postulaYa .formulario__input:focus +
+.formulario__label{
+    margin-top: -135px;
+}
+#postulaYa .formulario__label{
+    padding-left: 15px;
+    position:absolute;
+    margin-top:-85px;
+    z-index:-20;
+    color: rgba(0,0,0,0.5);
+    transition: all 0.2s;
+}
+.fijar{
+    margin-top: -135px;
+}
+#postulaYa .formulario_submit{
+    background: rgba(0,0,0,0.7);
+    color:white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border:none;
+}
 
-}
-#final{
+#quienes-somos{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -164,10 +230,10 @@ padding: 150px 12px;
     color:white;
     height: 80vh;
 }
-#final h2{
+#quienes-somos h2{
     font-size:9vw;
 }
-#final button{
+#quienes-somos button{
     font-size: 5vw;
 }
 
@@ -270,19 +336,6 @@ footer .container{
         )
         ,url("https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzYXJyb2xsYWRvciUyMGZyb250ZW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
     }
-    #caracteristicas{
-        background-image: url("https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzYXJyb2xsYWRvciUyMGZyb250ZW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
-        background-repeat:  no-repeat;
-        background-size: 500px 400px;
-        background-position: calc(100vw - 500px) 120px;
-    }
-    #caracteristicas .container{
-        text-align: initial;
-    }
-    #caracteristicas ul{
-        margin-left:100px;
-
-    }
     #final h2{
         font-size:5em;
     }
@@ -291,10 +344,5 @@ footer .container{
     }
     footer .container{
         justify-content: flex-end;
-    }
-}
-@media (min-width: 1200px){
-    #caracteristicas{
-        background-position-x: calc(100vw - 800px);
     }
 }
